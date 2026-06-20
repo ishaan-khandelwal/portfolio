@@ -276,18 +276,22 @@ export default function Home() {
           </div>
 
           <div className="about-grid grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-[48px] items-start">
-            <div className="about-photo aspect-square rounded-[18px] border-[2.5px] border-line bg-teal-fill flex items-center justify-center font-serif text-[4rem] font-semibold text-teal-dark rotate-[-1.5deg] select-none">
-              IK
+            <div className="about-photo aspect-square rounded-[18px] border-[2.5px] border-line bg-teal-fill rotate-[-1.5deg] overflow-hidden relative select-none">
+              <img
+                src="/ishaan.png"
+                alt="Ishaan Khandelwal"
+                className="w-full h-full object-cover object-center select-none"
+              />
             </div>
             <div className="about-body">
               <p className="text-[1.18rem] text-ink font-semibold leading-relaxed mb-[18px]">
-                I'm a full stack developer based in Jodhpur, six years into building web applications that are clean, fast, and maintainable.
+                I'm a full stack developer based in Bengalore, 1 years into building web applications that are clean, fast, and maintainable.
               </p>
               <p className="text-[1.02rem] leading-[1.75] text-ink-soft mb-[18px]">
                 Most of my work starts with a codebase that technically works but struggles to scale — a slow database, a laggy UI, or a fragile integration. I spend my time optimizing database indexes, building type-safe APIs, and ensuring the front-end loads in milliseconds.
               </p>
               <p className="text-[1.02rem] leading-[1.75] text-ink-soft mb-[18px]">
-                Before this I worked as a core engineer at two early-stage fintechs, which is where my obsession with web performance and secure architecture started.
+                Before this I worked as a software developer intern at DatamindX Technologies Pvt Ltd , which is where my obsession with web performance and secure architecture started.
               </p>
               <div className="tags flex flex-wrap gap-[8px] mt-[24px]">
                 <span className="tag font-mono text-[0.72rem] border-[1.5px] border-line rounded-full px-[13px] py-[6px] select-none hover:bg-ink/5 transition-colors cursor-default">
