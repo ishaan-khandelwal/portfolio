@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #FAF8F2;
+  --ink: #1C1A17;
+  --ink-soft: #5C584E;
+  --line: #1C1A17;
+  
+  --purple-fill: #EEEDFE;
+  --purple-mid: #7F77DD;
+  --purple-dark: #26215C;
+  --purple-text: #3C3489;
+  
+  --coral-fill: #FAECE7;
+  --coral-mid: #D85A30;
+  --coral-dark: #4A1B0C;
+  --coral-text: #712B13;
+  
+  --teal-fill: #E1F5EE;
+  --teal-mid: #1D9E75;
+  --teal-dark: #04342C;
+  --teal-text: #085041;
+  
+  --pink-fill: #FBEAF0;
+  --pink-mid: #D4537E;
+  --pink-dark: #4B1528;
+  --pink-text: #72243E;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-purple-fill: var(--purple-fill);
+  --color-purple-mid: var(--purple-mid);
+  --color-purple-dark: var(--purple-dark);
+  --color-purple-text: var(--purple-text);
+
+  --color-coral-fill: var(--coral-fill);
+  --color-coral-mid: var(--coral-mid);
+  --color-coral-dark: var(--coral-dark);
+  --color-coral-text: var(--coral-text);
+
+  --color-teal-fill: var(--teal-fill);
+  --color-teal-mid: var(--teal-mid);
+  --color-teal-dark: var(--teal-dark);
+  --color-teal-text: var(--teal-text);
+
+  --color-pink-fill: var(--pink-fill);
+  --color-pink-mid: var(--pink-mid);
+  --color-pink-dark: var(--pink-dark);
+  --color-pink-text: var(--pink-text);
+
+  --font-sans: var(--font-inter), sans-serif;
+  --font-serif: var(--font-fraunces), serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbars matching the reference design */
+.scrollbar-custom::-webkit-scrollbar {
+  height: 6px;
+}
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
 }
